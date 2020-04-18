@@ -1,6 +1,10 @@
 public class CSUtil{
 
     public static String trunc(double number, int places){
+        return trunc(number, places, true);
+    }
+
+    public static String trunc(double number, int places, boolean includeZeros){
 
     // Handle negative exponents.
         if (places < 0){
@@ -24,7 +28,7 @@ public class CSUtil{
         String str = new String("" + FNumber);
 
     // Ensure all zeros are shown
-        if (places > 0){
+        if (places > 0 && includeZeros){
             int end;
             int dot;
             while (true){
