@@ -78,6 +78,8 @@ public class CSUtil{
         return result;
     }
 
+
+// Handle various use cases.
     public static String toCurrency(double value, String currency){ return formatString(trunc(value, 2, true), currency); }
 
     public static String formatString(double number, String prefix){ return formatString(String.valueOf(number), prefix); }
